@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_home.views import home
+from app_venue.views import venues
 
 urlpatterns = [
-    path('', home, name='home'),
+    # Admin panel
     path('admin/', admin.site.urls),
+    
+    # Home/lanigng page
+    path('', home, name='home'),
+
+    # Venues page
+    path('venues/', venues, name='venues'),
 ]
